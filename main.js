@@ -1,8 +1,20 @@
 "use strict";
-var width = 480;
-var height = 270;
+var width = 240;
+var height = 135;
 var boardArr = matrixArray(height, width);
 var nextStateArr = matrixArray(height, width);
+
+var colors = [
+    '193, 66, 66, 0.4',
+    '196, 186, 53, 0.68',
+    '103, 196, 53, 0.68',
+    '53, 196, 129, 0.68',
+    '148, 218, 217, 0.68',
+    '64, 58, 130, 0.68',
+    '98, 31, 147, 0.68',
+    '117, 60, 110, 0.68',
+    '197, 21, 62, 0.68'
+    ]
 
 init();
 
@@ -154,7 +166,8 @@ function paintPixel(x, y) {
     var canvas = document.getElementById('board');
     if (canvas.getContext) {
         var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "rgb(200,0,0)";
+        var selectedColor = getRandomInt(0, colors.lenght);
+        ctx.fillStyle = 'rgb(' + colors[selectedColors] + ')';
         ctx.fillRect(scale(x).w, scale(y).h, scale(1).w, scale(1).h);
     }
 }
