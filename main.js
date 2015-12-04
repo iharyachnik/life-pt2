@@ -167,7 +167,7 @@ function paintPixel(x, y) {
     if (canvas.getContext) {
         var ctx = canvas.getContext("2d");
         var selectedColor = getRandomInt(0, colors.length);
-        ctx.fillStyle = 'rgb(' + colors[selectedColor] + ')';
+        ctx.fillStyle = 'rgba(' + colors[selectedColor] + ')';
         ctx.fillRect(scale(x).w, scale(y).h, scale(1).w, scale(1).h);
     }
 }
