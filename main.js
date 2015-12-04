@@ -22,7 +22,7 @@ function init() {
 }
 
 function setStartState() {
-    var startCount = getRandomInt(3000, 7000);
+    var startCount = getRandomInt(30000, 70000);
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < width; j++) {
             boardArr[i][j] = 0;
