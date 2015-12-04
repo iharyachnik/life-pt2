@@ -1,6 +1,6 @@
 "use strict";
-var width = 240;
-var height = 135;
+var width = 200;
+var height = 100;
 var boardArr = matrixArray(height, width);
 var nextStateArr = matrixArray(height, width);
 
