@@ -1,6 +1,6 @@
 "use strict";
-var width = 960;
-var height = 540;
+var width = 480;
+var height = 270;
 var boardArr = matrixArray(height, width);
 var nextStateArr = matrixArray(height, width);
 
@@ -22,7 +22,7 @@ function init() {
 }
 
 function setStartState() {
-    var startCount = getRandomInt(30000, 70000);
+    var startCount = getRandomInt(10000, 40000);
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < width; j++) {
             boardArr[i][j] = 0;
