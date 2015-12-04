@@ -5,15 +5,15 @@ var boardArr = matrixArray(height, width);
 var nextStateArr = matrixArray(height, width);
 
 var colors = [
-    '193, 66, 66, 0.4',
-    '196, 186, 53, 0.68',
-    '103, 196, 53, 0.68',
-    '53, 196, 129, 0.68',
-    '148, 218, 217, 0.68',
-    '64, 58, 130, 0.68',
-    '98, 31, 147, 0.68',
-    '117, 60, 110, 0.68',
-    '197, 21, 62, 0.68'
+    'rgba(193,66,66,0.4)',
+    'rgba(196,186,53,0.68)',
+    'rgba(103,196,53,0.68)',
+    'rgba(53,196,129,0.68)',
+    'rgba(148,218,217,0.68)',
+    'rgba(64,58,130,0.68)',
+    'rgba(98,31,147,0.68)',
+    'rgba(117,60,110,0.68)',
+    'rgba(197,21,62,0.68)'
     ]
 
 init();
@@ -167,7 +167,7 @@ function paintPixel(x, y) {
     if (canvas.getContext) {
         var ctx = canvas.getContext("2d");
         var selectedColor = getRandomInt(0, colors.length);
-        ctx.fillStyle = 'rgba(' + colors[selectedColor] + ')';
+        ctx.fillStyle = colors[selectedColor];
         ctx.fillRect(scale(x).w, scale(y).h, scale(1).w, scale(1).h);
     }
 }
